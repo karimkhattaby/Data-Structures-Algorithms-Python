@@ -1,0 +1,19 @@
+This program is expected to perform huffman coding algorithm.
+
+Data Structures used are:
+1- Min-Heap to create the tree,
+since we are interested in always keeping track of the minimum value.
+2- Dictionary/Hash Table to do mapping of characters to codes,
+since each unique character is mapped to a unique code a hash table is useful for these operations
+3- Binary Tree to store the characters and their frequencies,
+as well as tree traversal to generate the code of each character.
+
+Time Complexity: O(n log n), heapify is O(log n) and we do it O(n) times
+where n is the number of unique characters in the string
+Space Complexity: O(n), where n is the number of unique characters in the string
+
+PLEASE NOTE
+The solution could have been done in a recursive approach,
+which makes more sense for the given problem.
+However, an iterative approach is preferred to avoid a potential stack overflow.
+The iterative approach also reduces the memory usage of adding function calls to the call stack.

@@ -1,0 +1,20 @@
+This program is expected to implement LRU_Cache.
+
+Data Structure used is an ordered dictionary.
+It provides the required functionality in less complex yet efficient code.
+
+To exaplin the reasoning behind the Data Structure decision, here's the idea behind this implementation:
+"""
+The ordered dictionary will maintain the order of the inserted items.
+So the first inserted item will be at the beginning, while the last will be at the end.
+We make use of this property to design our program.
+So whenever we access an item (set or get), we remove it and re-insert it, to make sure it's at the end.
+When we want to remove the least recently used item, we simply remove the first item in the dictionary.
+"""
+
+For more information, refer to collections.OrderedDict documentation,
+which is available at https://docs.python.org/3/library/collections.html#collections.OrderedDict
+
+
+Time Complexity: O(1) for all operations
+Space Complexity: O(n), which is the size of the cache. All operations are done in O(1) space.

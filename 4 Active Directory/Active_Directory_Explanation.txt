@@ -1,0 +1,11 @@
+This program is expected to check if a user belongs to a group or any of its sub groups.
+
+Data Structure used is lists, as provided by the problem statement.
+
+Time and Space Complexity: O(n*m), where n is the number of groups and m is the number of users
+
+PLEASE NOTE
+The solution could have been done in a recursive approach,
+which makes more sense for the given problem.
+However, an iterative approach is preferred to avoid a potential stack overflow.
+The iterative approach also reduces the memory usage of adding function calls to the call stack.

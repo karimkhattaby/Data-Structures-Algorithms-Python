@@ -1,0 +1,16 @@
+This program is expected to create a blockchain and perform operations on it,
+such as adding blocks, searching for a specific block of data, and traversing blocks.
+
+Data Structure used is linked lists, as provided by the problem statement.
+
+Time Complexity: all operations take O(1) time
+             except O(n) for searching and traversing the blockchain
+             n is the number of blocks in the blockchain
+
+Space Complexity: O(n), where n is the number of blocks in the blockchain
+
+NOTE:
+The blockchain size is maintained as a property in the blockchain class.
+Every time we add a block, the method will increment the size.
+That's why we get O(1) time in get_size method,
+otherwise it would take O(n) to traverse and count the elements.

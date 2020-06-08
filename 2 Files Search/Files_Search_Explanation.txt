@@ -1,0 +1,15 @@
+This program is expected to find all files in a given path that match a given suffix.
+
+Data Structure used is List (was used as a stack, with list.append() and list.pop()).
+The reason is, we needed a data structure which has fast insertion and deletion,
+because we are constantly adding and removing elements as we visit directories and sub-directories.
+
+Time Complexity: O(n), where n is the number of files/directories in the directory tree.
+Space Complexity: O(m), where m is the number of files which match the given suffix.
+
+PLEASE NOTE
+The solution could have been done in a recursive approach,
+which makes more sense for the given problem.
+However, since there is no limit to the depth which the subdirectories can reach,
+an iterative approach is preferred to avoid a potential stack overflow.
+The iterative approach also reduces the memory usage of adding function calls to the call stack.

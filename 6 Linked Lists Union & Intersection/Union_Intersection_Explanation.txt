@@ -1,0 +1,21 @@
+This program is expected to get the union and intersection of 2 linked lists.
+
+Data Structure used is hash table (set).
+The reason is the linked lists aren't guaranteed to be sorted.
+
+The naive approach of checking whether each element exists in both lists would result in O(n^2).
+
+The other possible approach would be sorting both lists, which will take O(n log n) followed by O(n) checks.
+This procedure will be done using O(1) extra space.
+
+However, the chosen procedure will sacrifice a bit of space for a faster and less complex approach.
+
+Time Complexity: O(n+m), which is the total number of elements in both linked lists.
+Space Complexity: O(n+m) for union
+                  O(n) for intersection,
+                  where n is the number of nodes in the first linked list,
+                  and m is the number of nodes in the second linked list.
+
+NOTE:
+Output linked list is not counted in the space complexity.
+The space was rather consumed by the set/hash table data structure used to temporarily hold the data.
