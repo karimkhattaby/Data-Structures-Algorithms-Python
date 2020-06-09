@@ -1,0 +1,20 @@
+This program is expected to search for the index of a given target in a rotated sorted array.
+
+No Data Structures were used.
+The solution uses simple math with 3 pointers; left, right and mid.
+
+The naive approach to solve this problem would be to use linear search.
+So we loop through all elements in the array,
+if the element matches the target, we return its index,
+if no elements match the target, we return -1.
+This would be done in O(n) time.
+
+However, a more efficient approach would be to do binary search over the interval 0 to n.
+First, we find the rotation index of the array using a modified binary search.
+Then, we split our array into 2 intervals,
+Interval 1: 0 to rotation index, Interval 2: rotation index to n.
+If the number is between array[0] and array[rotation_index] we perform binary search over Interval 1
+Otherwise, we perform binary search over Interval 2.
+
+Time Complexity: O(log n), where n is the number of elements in the array
+Space Complexity: O(1)

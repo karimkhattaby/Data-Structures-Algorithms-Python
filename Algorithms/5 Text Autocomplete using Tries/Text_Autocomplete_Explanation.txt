@@ -1,0 +1,18 @@
+This program is expected to implement text autocomplete feature using a trie.
+
+Data Structure used: Trie, as given by the problem statement.
+As well as a hash table to store each node's children for fast lookups.
+
+The autocomplete feature is built in 2 steps.
+STEP 1: find the trie node where the given prefix string ends.
+STEP 2: find all suffixes starting from the prefix node.
+The program returns all suffixes, which can be merged later with the prefix to display suggestions.
+
+Time Complexity of lookup: O(n), where n is the length of the string.
+Space Complexity of the tire: O(ALPHABET_SIZE * key_length * N)
+Source: https://www.geeksforgeeks.org/trie-insert-and-search/
+
+NOTE: for an interactive version of this feature,
+open the attached jupyter notebook (Text_Autocomplete_Interactive.ipynb), and run all the cells.
+After you run the last cell, a small box will appear.
+As you type and erase text, the suffixes below will change.

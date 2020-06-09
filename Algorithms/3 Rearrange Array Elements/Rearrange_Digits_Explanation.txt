@@ -1,0 +1,21 @@
+This program is expected to rearrange array elements to form 2 numbers,
+such that their sum gives the largest sum possible,
+without letting the difference of the number of digits between them exceed 1 digit.
+
+Data Structure used: list to perform merge sort and a list to store the 2 numbers
+
+The naive approach to solve this problem would be brute-force.
+So we loop through all elements in the array,
+each time we find the maximum value and pop it to one of the numbers
+and repeat the same until we exhaust all elements in the array.
+This would be done in O(n^2) time.
+
+However, a more efficient approach would be to sort the array elements
+in a descending order using merge-sort.
+And then, loop through all the elements of the sorted array,
+append the first element into the first number,
+and append the second element into the second number.
+Keep doing this until we exhaust all elements in the array.
+
+Time Complexity: O(n log n), where n is the number of elements in the array.
+Space Complexity: O(n), utilized by merge sort.

@@ -1,0 +1,17 @@
+This program is expected to get the min and max values of an array.
+
+No Data Structures were used.
+The program uses 2 variables to store the min and max values.
+
+An initial thought of the problem might be to sort the array,
+and then return the first and last values in the array.
+However, this approach will take O(n log n) time.
+
+A more efficient approach would be to loop through all the values of the array.
+And keep track of the minimum and maximum values in the array as it encounters elements.
+So whenever it encounters a value greater than the max value stored, it updates it.
+And whenever it encounters a value less than the min value stored, it updates it.
+After exiting the loop, it will return the min and max values found
+
+Time Complexity: O(n) single traversal, where n is the number of elements in the array.
+Space Complexity: O(1)

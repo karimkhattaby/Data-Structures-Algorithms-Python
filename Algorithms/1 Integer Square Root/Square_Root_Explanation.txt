@@ -1,0 +1,19 @@
+This program is expected to find the square root of integer numbers.
+
+No Data Structures were used.
+The solution uses simple math with 3 pointers; left, right and mid.
+
+The naive approach to solve this problem would be
+to get the squared value (i^2) of every number from 0 to n (i)
+and get the squared value of the next value ((i+1)^2)
+and see if the number lies between those 2 values.
+This would be done in O(n) time.
+
+However, a more efficient approach would be to do binary search over the interval 0 to n.
+Every step, we calculate the middle number of the interval (mid).
+If the squared value (mid^2) is larger than our number, we move the interval to the left
+so the new interval becomes 0 to mid
+However if it's less, we move the interval to the right so the new interval becomes mid to n
+
+Time Complexity: O(log n), where n is the given number
+Space Complexity: O(1)

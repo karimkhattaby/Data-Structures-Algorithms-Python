@@ -1,0 +1,23 @@
+This program is expected to implement HTTP requests router using a Trie.
+
+Data Structure used: Trie, as given by the problem statement.
+As well as a hash table to store each node's children for fast lookups.
+
+This program is a modification of problem 5 "autocomplete with tries".
+It stores webpage paths and their handlers, and performs lookup to retrieve the stored handlers.
+The main modification implemented is storing the paths as blocks (strings),
+instead of storing every letter of the path, in order to reduce the space consumption of the trie.
+
+Time Complexity: O(n), where n is the number of directories and pages in a path
+Space Complexity: O(n)
+
+NOTES:
+1- Null paths and empty path strings were handled to point to the root.
+2- 404 was handled using a not found handler
+3- Leading/trailing slashes were removed using the string strip method.
+4- Assumed that it's possible to add a handler to the root,
+    since in real life scenarios the root of the website points to the index/home page.
+5- Assumed that it's possible to add a null handler to a page,
+    which indicates removing the page from the website or changing it into a directory.
+6- The path split helper method returns a list of pieces/strings that make up a path,
+    a path to root is indicated using an empty list.

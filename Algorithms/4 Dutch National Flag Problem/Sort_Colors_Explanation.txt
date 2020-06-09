@@ -1,0 +1,16 @@
+This program is expected to sort an array of 0s, 1s and 2s in a single traversal.
+
+No Data Structures were used.
+The program solves the problem using 3 pointers.
+
+The approach taken by this program is dijkstra algorithm using 3 pointers.
+We fix a pointer to the left of the array and another to the right of the array,
+and move a 3rd pointer from the beginning to the end of the array.
+If the encountered number is a 0, we move it to the beginning of the array in an O(1) swap operation.
+We also move the left and current pointer to the next index.
+If the encountered number is a 1, we simply move to the next index as the number is already in its place.
+If the encountered number is a 2, we move it to the end of the array in an O(1) swap operation.
+We also move the right pointer to the previous index.
+
+Time Complexity: O(n) single traversal, where n is the number of elements in the array.
+Space Complexity: O(1), in place algorithm
